@@ -16,7 +16,7 @@ function getSongs(searchInput) {
         .then(res => res.json())
         .then(result => {
             for (let object of result.results) {
-                console.log(object)
+                
                 renderTrack(object)
             }
 
@@ -25,7 +25,7 @@ function getSongs(searchInput) {
 
 form.addEventListener('submit', function (event) {
     event.preventDefault()
-    const searchInput = document.querySelector('#input-artist').value
+    const searchInput = document.querySelector('#inputArtist').value
     getSongs(searchInput)
 
 })
@@ -68,4 +68,28 @@ function renderTrack(track) {
 </audio>
 </figure>`
 }
+
+
+// function deleteTracks(track) {
+
+  
+    
+
+
+
+
+
+function clearTracks(cardSection) {
+    console.log(cardSection)
+    cardSection.innerHTML = ""
+   
+}
+
+inputArtist.addEventListener('focus', function (event) {
+    console.log('CLICKED')
+    const cardSection = document.querySelector('#cardSection')
+    clearTracks(cardSection)
+
+})
+
 
