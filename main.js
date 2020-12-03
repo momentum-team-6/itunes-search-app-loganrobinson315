@@ -15,10 +15,16 @@ function getSongs(searchInput) {
 
         .then(res => res.json())
         .then(result => {
-            for (let object of result.results) {
+            if (result.resultCount > 0) {
+                for (let object of result.results) {
                 
                 renderTrack(object)
             }
+        } else {
+            console.log('none')
+            cardSection.innerHTML = '<div class="noResults">No Results Found</div>'
+        }
+            
 
         })
 }
@@ -27,6 +33,9 @@ form.addEventListener('submit', function (event) {
     event.preventDefault()
     const searchInput = document.querySelector('#inputArtist').value
     getSongs(searchInput)
+    const inputArtist = document.querySelector('#inputArtist')
+    clearInput(inputArtist)
+
 
 })
 
@@ -92,4 +101,16 @@ inputArtist.addEventListener('focus', function (event) {
 
 })
 
+
+
+function clearInput(artistInput) {
+    artistInput.value = ""
+   
+}
+
+// form.addEventListener('submit', function (event) {
+//     const artistInput = document.querySelector('#artistInput')
+//     clearInput(artistInput)
+
+// })
 

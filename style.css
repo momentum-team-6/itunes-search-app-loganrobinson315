@@ -3,6 +3,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
+    margin: auto;
+  
 }
 
 div {
@@ -23,6 +25,7 @@ body {
 }
 
 .input-field {
+  /* position: fixed; */
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -31,6 +34,7 @@ body {
     width: 75%;
     border-radius: 10px;
     margin-top: 40px;
+    
 }
 
 
@@ -49,6 +53,8 @@ body {
     text-decoration: none;
     margin-right: auto;
     margin-left: auto;
+    /* position: fixed; */
+    margin-block-start: 10px;
   }
   @keyframes glowing {
     0% {
@@ -82,6 +88,7 @@ body {
     text-overflow: ellipsis;
     line-height: 25px;
     max-height: 25*45;
+   
 }
 
 
@@ -93,4 +100,17 @@ body {
 .track-title {
     font-size:15px
     
+}
+
+.input-field:invalid {
+  background-color: red;
+}
+
+div {
+  background-image: url(https://cdn.pixabay.com/photo/2018/02/23/21/19/moon-3176644__340.jpg);
+  border-radius: 30px;
+  margin: 15px;
+  margin: auto;
+  margin-block-end: 20px;
+  margin-block-start: 20px;
 }
