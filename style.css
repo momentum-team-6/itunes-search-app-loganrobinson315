@@ -102,8 +102,17 @@ body {
     
 }
 
-.input-field:invalid {
-  background-color: red;
+
+
+.noResults {
+  border: solid;
+  border-color: white;
+  border-radius: 0%;
+  color: red;
+  background-color: white;
+  
+  
+
 }
 
 div {
@@ -114,3 +123,6 @@ div {
   margin-block-end: 20px;
   margin-block-start: 20px;
 }
+
+
+

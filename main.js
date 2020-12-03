@@ -2,9 +2,6 @@ const itunesApi = 'https://itunes-api-proxy.glitch.me/search?'
 const audioPlayer = document.querySelector('#audio-player')
 const form = document.querySelector('#search')
 
-
-
-
 function getSongs(searchInput) {
 
     let searchUrl = `${itunesApi}term=${searchInput}`
@@ -39,9 +36,6 @@ form.addEventListener('submit', function (event) {
 
 })
 
-
-
-
 function renderTrack(track) {
 
 
@@ -74,19 +68,8 @@ function renderTrack(track) {
     src=${track.previewUrl}>
         Your browser does not support the
         <code>audio</code> element.
-</audio>
-</figure>`
+</audio>`
 }
-
-
-// function deleteTracks(track) {
-
-  
-    
-
-
-
-
 
 function clearTracks(cardSection) {
     console.log(cardSection)
@@ -108,9 +91,4 @@ function clearInput(artistInput) {
    
 }
 
-// form.addEventListener('submit', function (event) {
-//     const artistInput = document.querySelector('#artistInput')
-//     clearInput(artistInput)
-
-// })
 
